@@ -47,7 +47,7 @@ class Flue {  // vi laver en class som hedder flue der så er det der bliver ind
    positionX  = random(0, height);
    positionY  = random(0, width);
    vinkel     = random(0, 2*PI); 
-   fscale = gscale;
+   fscale = gscale; //beskriver koordinatsystem når "e" bliver trykket på
    
  }
 
@@ -66,7 +66,7 @@ class Flue {  // vi laver en class som hedder flue der så er det der bliver ind
     if(sin(vinkel) * (distanceFlyttet * fscale) + positionY < 0 )
     speed = speed * -1;
     if(sin(vinkel) * (distanceFlyttet * fscale) + positionY > height)
-    speed = speed * -1;
+    speed = speed * -1; //gør så fluer vender om når rammer væg
   }
 
   void tegnFlue() {
